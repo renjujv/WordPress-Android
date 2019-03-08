@@ -15,4 +15,9 @@ public class InterceptorModule {
     public Interceptor provideStethoInterceptor() {
         return new StethoInterceptor();
     }
+
+    @Provides @IntoSet @Named("interceptors")
+    public Interceptor provideMockHostInterceptor() {
+        return new MockHostInterceptor();
+    }
 }
